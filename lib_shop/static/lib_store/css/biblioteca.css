@@ -1,0 +1,301 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.menu{
+    position: relative;
+    display: inline-block;
+
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.submenu li {
+    list-style: none;
+}
+
+.submenu li a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #555;
+}
+
+.menu:hover .submenu {
+    display: block;
+}
+
+
+
+
+
+.header_1{
+    background-color: #b065f3;
+    position: absolute;
+    width: 100%;
+    height: 4rem;
+}
+.header_2{
+    background-color:  #514b4b;
+    margin-top: 4.0rem;
+    position: absolute;
+    width: 100%;
+    height: 2.2rem;
+}
+.logo_do_site{
+    position: relative;
+    height: 62px;
+    width: 100px;   
+    padding-left: 2rem; 
+}
+
+.title_site{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+    position: relative;
+    margin-top: -3.2rem;
+    margin-left: 7rem;
+}
+a{
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+
+}
+
+.search-bar{
+    position: relative;
+    margin-left: 28%;
+    margin-top: -2.5rem;
+}
+
+.Pesquisar{
+    width: 600px;
+    height: 32px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #514b4b;
+}
+
+.search_button{
+    position: relative;
+    border-radius: 100%;
+    height: 36px;
+    width: 36px;
+    top: 0.7rem;
+    margin-left: 1rem;
+    cursor: grab;
+
+}
+
+.button_image{
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+   
+}
+
+.links,.links_1,.links_2,.links_3,.links_4{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    height: 100%;
+    text-decoration: none;
+    font-size: 100%;
+    display: flex;
+    gap: 0;
+    box-shadow: #514b4b;
+    background: #514b4b;
+    border-color: #514b4b;
+    white-space: nowrap;
+    line-height: 2rem;
+    border: transparent;
+    cursor: grab;
+    
+}
+.links_1{
+    padding-left: 2rem;
+}
+.links_2,.links_3,.links_4{
+    padding-left: 2.2rem;
+}
+
+.links_1:hover,.links_2:hover,.links_3:hover,.links_4:hover{
+    color: #b065f3;
+}
+
+
+
+
+
+
+
+
+
+.header_2 .dropdown {
+    position: relative;
+    display: inline-table;
+}
+
+.header_2 .dropdown-content {
+    display: none;  /* Inicialmente oculto */
+    position: absolute;
+    background-color: #504A4A;
+    scrollbar-width: thin;
+    min-width: 180px;
+    max-width: 180px;
+    max-height: 120px;
+    overflow-y: auto;
+    scroll-padding-left: 1px
+    ;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.header_2 .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.header_2 .dropdown-content a:hover {
+    background-color: #000000;
+}
+
+/* Mostrar o dropdown ao clicar no botão */
+.header_2 .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.show {
+    display: block;  /* Mostrar o dropdown quando a classe "show" for adicionada */
+}
+
+.titulo_categoria{
+    color: rgb(255, 255, 255);
+    position: relative;
+    padding-left: 1rem;
+    top: 13.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large  ;
+    background-color: #B065F3;
+    font-style: normal;
+    height: 29px;
+}
+
+
+.livro{
+    flex: 1 1 200px;  /* Define que cada item ocupe ao menos 200px */
+    max-width: 200px;
+}
+
+.capa_livro{
+    height: 280px;
+    width: auto;
+    max-height: 280px;
+    object-fit: cover;
+}
+
+.titulo_livro{
+    position: relative;
+    font-style: oblique;
+    color: rgb(255, 255, 255);
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 0rem;
+}
+
+.cifrao{
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.preco_livro{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ff0000;
+    top: 1rem;
+}
+
+.livros_categoria {
+    position: relative;
+    margin-top: 13.1rem;
+    padding-top: 1rem;
+    padding-left: 2.8rem;
+    background-color: #514B4B;
+    display: flex;
+    flex-direction: row; /* Garante que os livros fiquem na horizontal */
+    flex-wrap: nowrap; /* Remove a quebra de linha */
+    gap: 4rem; /* Espaço entre os livros */
+    overflow-x: auto; /* Adiciona rolagem horizontal se houver muitos livros */
+}
+.rodape{
+    position: relative;
+    background-color: #514B4B;
+    top: 10rem;
+    height: 150px;
+}
+
+.texto_rodape{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+
+.Registrar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    color: white;
+    background-color: #333;
+    padding: 3px;
+    position: relative;
+    top: -2rem;
+    border-radius: 1rem;
+    margin-left: 82rem;
+    cursor: grab;
+}
+.Registrar:hover{
+    color: #B065F3;
+}
+
+.Entrar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    color: white;
+    background-color: #333;
+    padding: 3px;
+    position: relative;
+    top: -4rem;
+    border-radius: 1rem;
+    margin-left: 89rem;
+    cursor: grab;
+}
+.Entrar:hover{
+    color: #B065F3;
+}
+
+.download{
+    background-color: #b065f3;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 2.5px;
+    font-size: large;
+    border-radius: 10%;
+    color: white;
+    cursor: grab;
+}
+.download:hover{
+    color: #ff0000;
+}

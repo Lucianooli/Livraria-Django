@@ -1,0 +1,393 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.menu{
+    position: relative;
+    display: inline-block;
+
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.submenu li {
+    list-style: none;
+}
+
+.submenu li a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.submenu li a:hover {
+    background-color: #555;
+}
+
+.menu:hover .submenu {
+    display: block;
+}
+
+
+
+
+
+.header_1{
+    background-color: #b065f3;
+    position: absolute;
+    width: 100%;
+    height: 4rem;
+}
+.header_2{
+    background-color:  #514b4b;
+    margin-top: 4.0rem;
+    position: absolute;
+    width: 100%;
+    height: 2.2rem;
+}
+.logo_do_site{
+    position: relative;
+    height: 62px;
+    width: 100px;   
+    padding-left: 2rem; 
+}
+
+.title_site{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    color: rgb(255, 255, 255);
+    position: relative;
+    margin-top: -3.2rem;
+    margin-left: 7rem;
+}
+a{
+    text-decoration: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+
+}
+
+.search-bar{
+    position: relative;
+    margin-left: 28%;
+    margin-top: -2.5rem;
+}
+
+.Pesquisar{
+    width: 600px;
+    height: 32px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px #514b4b;
+}
+
+.search_button{
+    position: relative;
+    border-radius: 100%;
+    height: 36px;
+    width: 36px;
+    top: 0.7rem;
+    margin-left: 1rem;
+    cursor: grab;
+
+}
+
+.button_image{
+    border-radius: 100%;
+    height: 100%;
+    width: 100%;
+   
+}
+
+.links,.links_1,.links_2,.links_3,.links_4{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    height: 100%;
+    text-decoration: none;
+    font-size: 100%;
+    display: flex;
+    gap: 0;
+    box-shadow: #514b4b;
+    background: #514b4b;
+    border-color: #514b4b;
+    white-space: nowrap;
+    line-height: 2rem;
+    border: transparent;
+    cursor: grab;
+    
+}
+.links_1{
+    padding-left: 2rem;
+}
+.links_2,.links_3,.links_4{
+    padding-left: 2.2rem;
+}
+
+.links_1:hover,.links_2:hover,.links_3:hover,.links_4:hover{
+    color: #b065f3;
+}
+
+
+
+
+
+
+
+
+
+.header_2 .dropdown {
+    position: relative;
+    display: inline-table;
+}
+
+.header_2 .dropdown-content {
+    display: none;  /* Inicialmente oculto */
+    position: absolute;
+    background-color: #504A4A;
+    scrollbar-width: thin;
+    min-width: 180px;
+    max-width: 180px;
+    max-height: 120px;
+    overflow-y: auto;
+    scroll-padding-left: 1px
+    ;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.header_2 .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.header_2 .dropdown-content a:hover {
+    background-color: #000000;
+}
+
+/* Mostrar o dropdown ao clicar no botão */
+.header_2 .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.show {
+    display: block;  /* Mostrar o dropdown quando a classe "show" for adicionada */
+}
+
+.livro-card{
+    background-color: #333;
+    position: relative;
+    width: 91%;
+    height: 550px;
+    top: 10rem;
+    left: 4%;
+    border-radius: 1rem;
+    box-shadow: 0 0 1rem #b065f3; /* Offset X, Offset Y, Blur Radius, Color */
+}
+
+.livro-capa{
+    margin-left: 2rem;
+    margin-top: 3rem;
+    padding-left: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-right: 2rem;
+    height: 360.1px;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 0 5px white;
+    border-radius: 1rem;
+}
+
+.titulo_livro{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    margin-top: -27.2rem;
+    margin-left: 40rem;
+}
+
+.titulo_1{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    margin-left: 45rem;
+    margin-top: 0.5rem;
+}
+
+.hr_1{
+    margin-left: 17rem;
+    width: 80%;
+}
+.hr_2{
+    margin-left: 17rem;
+    width: 80%;
+    margin-top: 22.2rem;
+}
+
+.sinopse {
+    position: relative; /* Para que o z-index funcione */
+    z-index: 1; /* Garante que a sinopse fique abaixo do título */
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    margin-left: 25rem;
+    color: white;
+    height: auto;
+    max-height: 21.3rem;
+    width: 60.6rem;
+    text-align: justify;
+    padding: 2rem 1rem 1rem 1rem;
+    overflow-y: auto; /* Rolagem vertical */
+    overflow-x: hidden; /* Remove rolagem horizontal */
+    word-wrap: break-word;
+    white-space: normal;
+    box-sizing: border-box;
+    margin-top: -22.0rem;
+}
+
+
+.cifrao{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: x-large;
+}
+
+.preco{
+    color: rgb(255, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+ 
+}
+
+.preco_produto{
+    z-index: 1;
+    padding-top: 0.3rem;
+    top: 5rem;
+    padding-left: 13rem;
+}
+
+.comprar{
+    padding: 0.3rem;
+    background-color: #b065f3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    border-radius: 15%;
+    color: white;
+    margin-left: -8rem;
+    margin-top: -4rem;
+    cursor: grab;
+}
+
+.comprar:hover{
+    color:#C7DFF1;
+}
+
+.comprar_2{
+    padding: 0.3rem;
+    background-color: #b065f3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    border-radius: 15%;
+    color: white;
+    margin-left: 65rem;
+    cursor: grab;
+}
+
+.comprar_2:hover{
+    color:#C7DFF1;
+}
+
+.rodape{
+    position: relative;
+    background-color: #514B4B;
+    top: 20rem;
+    height: 150px;
+    
+}
+
+.texto_rodape{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.Registrar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    color: white;
+    background-color: #333;
+    padding: 3px;
+    position: relative;
+    top: -3.5rem;
+    border-radius: 1rem;
+    margin-left: 82rem;
+    cursor: grab;
+}
+.Registrar:hover{
+    color: #B065F3;
+}
+
+.Entrar{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+    color: white;
+    background-color: #333;
+    padding: 3px;
+    position: relative;
+    top: -5.5rem;
+    border-radius: 1rem;
+    margin-left: 89rem;
+    cursor: grab;
+}
+.Entrar:hover{
+    color: #B065F3;
+}
+
+.saldo{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: large;
+    position: relative;
+    top: -1.7rem;
+    background-color: #333333;
+    color: white;
+    border-radius: 5px;
+    margin-left: 16rem;
+    cursor: grab;
+}
+
+.forms_comprar{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: -0.8rem;
+}
+
+
+.Disponivel{
+    padding: 0.2rem;
+    background-color: #b065f3;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-large;
+    border-radius: 15%;
+    color: white;
+    margin-left: -10rem;
+    margin-top: -6rem;
+    cursor: grab;
+}
+
+.exemplo{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+    font-size: x-large;
+    text-align: center;
+    color: white;
+}

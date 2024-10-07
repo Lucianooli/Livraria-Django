@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>| {{ livro }} |  </title>
+    <link rel="shortcut icon" href="../../static/lib_store/images/favicon_site.png" type="image/x-icon">
+    <link rel="stylesheet" href="../../static/lib_store/css/book.css">
+</head>
+<body>
+
+
+
+
+<div>
+    <header class="header_1">
+        <div>
+            <div>
+                <a href="{% url 'home' %}">
+                    <img src="../../static/lib_store/images/logo_do_site.png" alt="" class="logo_do_site">
+                    <h1 class="title_site">Book Party</h1>
+                </a>
+            </div>
+            <div class="search-bar">
+                <form action="{% url 'pesquisar' %}" method="get">
+                    <input type="text" name="q" placeholder=" Pesquisar..."  class="Pesquisar">
+                    <button type="submit" class="search_button">
+                        <img class="button_image" src="../../static/lib_store/images/Search-Button-PNG-Image-HD.png" alt="">
+                    </button>
+                </form>
+            </div>
+            {% if user.is_authenticated %}
+                <a href="{% url 'banco' %}"><button class="saldo">Saldo: {{ saldo }}</button></a>
+                <a href="{% url 'biblioteca_usuario' %}"><button class="Registrar" >{{user.username }}</button></a>
+                <a href="{%  url 'logout' %}"><button class="Entrar">Sair</button></a>
+
+            {% else %}
+                <a href="{% url 'register' %}"><button class="Registrar" >Registrar</button></a>
+                <a href="{%  url 'login' %}"><button class="Entrar">Entrar</button></a>
+            {% endif %}
+        </div>
+    </header>
+    <header class="header_2">
+        <div class="links">
+            <div class="dropdown">
+                <button class="links_1" onclick="toggleDropdown()">Categorias</button>
+                <div id="categoriaDropdown" class="dropdown-content">
+                    {% for cat in categoria %}
+                        <button class="links_4"> <a href="{% url 'categorias_pag' cat.id %}">{{ cat.nome }}</a></button>  <!-- Ajuste 'nome' para o campo correto do seu modelo Categoria -->
+                    {% endfor %}
+                </div>
+            </div>
+            <button class="links_2"><a href="{% url 'categorias_pag' 4 %}">Ficção</a></button>
+            <button class="links_3"><a href="{% url 'categorias_pag' 10 %}">Dark romance</a></button>
+            <button class="links_4"><a href="{% url 'categorias_pag' 11 %}">Gratuitos</a></button>
+            <button class="links_4"><a href="{% url 'categorias_pag' 12 %}">Fantasia</a></button>
+            <button class="links_4"><a href="{% url 'categorias_pag' 13 %}">Mangás</a></button>
+            <button class="links_4"><a href="{% url 'categorias_pag' 14 %}">Famosos</a></button>
+            <button class="links_4"><a href="{% url 'categorias_pag' 2 %}">Terror</a></button>
+            <button class="links_4"><a href="{% url 'categorias_pag' 9 %}">Suspense</a></button>
+            <button class="links_4"><a href="{% url 'categorias_pag' 1 %}">Ação</a></button>
+            <button class="links_4"><a href="{% url 'categorias_pag' 15 %}">Clássicos</a></button>
+            <button class="links_4"><a href="{% url 'categorias_pag' 16 %}">Didáticos</a></button>
+            <button class="links_4"><a href="{% url 'categorias_pag' 17 %}">LGBTQ+</a></button>
+            <button class="links_4"><a href="{% url 'categorias_pag' 18 %}">Poesia</a></button>
+            <button class="links_4"><a href="{% url 'categorias_pag' 19 %}">One-Shot</a></button>
+        </div>
+    </header>
+
+    <div class="livro-card">
+        <div >
+            <img class="livro-capa" src="{{ livro.capa.url }}" alt="">
+            <div class="preco_produto">
+                <span class="cifrao">R$ </span><span class="preco"> {{ livro.preco }}</span>
+                {% if not ja_possui_livro %}
+                <form method="POST" class="forms_comprar">
+                    {% csrf_token %}
+                    <button type="submit" class="comprar">Comprar</button>
+                </form>
+                {% else %}
+                <div class="forms_comprar">
+                    <a href="{% url 'biblioteca_usuario' %}"><button class="Disponivel">Disponivel</button></a>
+                </div>    
+                {% endif %}
+               
+            </div>
+            <h1 class="titulo_livro">{{ livro.titulo }}</h1>
+            <hr class="hr_1">
+            <hr class="hr_2">
+            <p class="sinopse"> {{ livro.sinopse }}</p>
+            
+        </div>
+    </div>
+    <div class="rodape">
+        <div class="texto_rodape">
+            <h4>Bem-vindo ao meu portfólio!</h4>
+            <h4>Este site foi desenvolvido utilizando Django, JavaScript, HTML e CSS.</h4>
+            <h4>Sou Luciano Cleberton Ribeiro, e este é um exemplo do meu trabalho como programador.</h4>
+            <h4>Para explorar mais projetos que criei, visite meu perfil no GitHub: Lucianooli.     </h4>
+        </div>
+    </div>
+</div>
+</body>
+</html>
